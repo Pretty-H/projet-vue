@@ -1,0 +1,181 @@
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-image: url('@/assets/fond1.png');
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+
+.tableau {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  gap: 20px;
+  text-align: center;
+}
+
+.tableau h2 {
+  font-size: 2rem;
+  color: #ffffff;
+  text-shadow: 0px 0px 8px rgba(0, 255, 255, 0.6);
+}
+
+.card-tableau {
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 20px;
+  padding: 30px;
+  padding-right: 20px; /* pour scrollbar */
+  backdrop-filter: blur(12px);
+  border: 2px solid #4dd0e1;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  width: 90%;
+  max-width: 1500px;
+  height: 500px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* Scrollbar stylée */
+.card-tableau::-webkit-scrollbar {
+  width: 10px;
+}
+
+.card-tableau::-webkit-scrollbar-thumb {
+  background: rgba(0, 229, 255, 0.6);
+  border-radius: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.card-tableau::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  color: white;
+  font-size: 19px;
+  text-align: center;
+  table-layout: fixed;
+}
+
+th, td {
+  padding: 12px;
+  max-width: 300px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 48px;
+  line-height: 48px;
+  vertical-align: middle;
+}
+
+th {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #00e5ff;
+}
+
+button {
+  margin: 5px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: none;
+  background-color: #00bcd4;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #0097a7;
+}
+
+.input-inline::placeholder {
+  color: #cbeff7;
+}
+
+.input-inline {
+  box-shadow: 0 0 5px #00e5ff;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-size: 15px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  width: 60%;
+  padding: 12px;
+  transition: background-color 0.3s ease;
+}
+
+.message-grandiose {
+  margin: 10px auto;
+  text-align: center;
+  font-size: 19px;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 8px;
+  background: #002f4b;
+  color: #00e5ff;
+  border: 2px solid #00e5ff;
+  box-shadow: 0 0 8px rgba(0, 229, 255, 0.5);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #002f4b;
+  color: #00e5ff;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 0 30px rgba(0, 229, 255, 0.5);
+}
+
+.modal-buttons button {
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: #00bcd4;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  transition: background-color 0.2s;
+}
+
+.modal-buttons button:hover {
+  background-color: #007c91;
+}
